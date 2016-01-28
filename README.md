@@ -41,5 +41,7 @@ You can even use a badge like this page does at the top if you want. Just copy t
 This is an ASP.Net project meant to run on Visual Studio 2015. It's mostly C# and TypeScript. In order to run it, you will need the following dependencies:
 
 1-DocumentDB: This is where diagrams get stored. You need to point the web.config to your instance of DocumentDB (app settings)
+
 2-Azure Active Directory: In order to design diagrams, the user has to be authenticated against Azure AD. To thest the app locally you will need to setup your own Azure AD application and configure the settings (Client ID, Tenant, Audience and Password) in the web.config for it
+
 3-Azure blob storage: Setup an Azure blob storage and point the web.config (StorageConnectionString) to it.
