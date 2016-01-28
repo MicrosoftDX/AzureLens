@@ -1,0 +1,15 @@
+﻿{
+  "objects": [
+    {
+      "id": "VMBox1",
+      "type": "BOX_TYPE.VM",
+      "position2": {
+        "x": 0,
+        "y": 0
+      },
+      "pinnedToMenu": true,
+      "menuName": "1 - This is a VM",
+      "description": "This box represents a VM."
+    }
+  ]
+}

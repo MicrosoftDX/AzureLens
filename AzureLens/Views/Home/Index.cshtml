@@ -1,0 +1,341 @@
+﻿
+<canvas id="renderCanvas"></canvas>
+
+<div id="menu">
+    <nav>
+        <h2><i class="fa fa-reorder"></i>AzureLens</h2>
+        <ul>
+            <li>
+                <a href="#goHome">Home<i class="fa fa-home"></i></a>
+            </li>
+            <li>
+                <a href="#">File<i class="fa fa-file"></i></a>
+                <h2>File<i class="fa fa-file"></i></h2>
+                <ul>
+                    <li>
+                        <a href="#download">Download...</a>
+                    </li>
+                    <li>
+                        <a id="editMenuLink" href="#edit">Enter Edit Mode</a>
+                    </li>
+                    <li>
+                        <a href="#fileNew">New</a>
+                    </li>
+                    <li>
+                        <a href="#openfile">Open local file...</a>
+                        <input type="file" style="display:none;" />
+                    </li>
+                    <li>
+                        <a href="#openserver">Open from server...</a>
+                    </li>
+
+                    <li>
+                        <a href="#save">Save</a>
+                    </li>
+                    <li>
+                        <a href="#fileshare">Share</a>
+                    </li>
+                </ul>
+            </li>
+
+
+            <li>
+                <a href="#">Browse<img src="./svg/browse.svg" class="menuicon" /></a>
+                <h2>Browse<img src="./svg/browse.svg" class="menuicon" /></h2>
+                <ul>
+                    <li>
+                        <a href="#">Diagrams</a>
+                        <h2>Diagrams</h2>
+                        <ul>
+                            <li>
+                                <a href="#">1 - How-Old.net</a>
+                            </li>
+                            <li>
+                                <a href="#">2 - Test</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                </ul>
+            </li>
+            <li>
+                <a href="#">Navigate<i class="fa fa-eye"></i></a>
+                <h2>Navigate<i class="fa fa-eye"></i></h2>
+                <ul></ul>
+            </li>
+            <li>
+                <a href="#">Notifications<img src="./svg/notification.svg" class="menuicon" /></a>
+                <h2>Notifications<img src="./svg/notification.svg" class="menuicon" /></h2>
+                <ul>
+                    <li>
+                        <a href="#ni">Configure</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Settings<img src="./svg/settings.svg" class="menuicon" /></a>
+                <h2>Settings<img src="./svg/settings.svg" class="menuicon" /></h2>
+                <ul>
+                    <li>
+                        <a href="#ni">Switch Subscriptions</a>
+                    </li>
+                    <li>
+                        <a href="#ni">General Settings</a>
+                    </li>
+                    <li>
+                        <a href="#ni">Navigation Mode</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+</div>
+<div id="viewSwitchDiv">
+    <div id="switch2d" onclick="lens.notImplemented();">2D</div>&nbsp;
+    <div id="switch3d">3D</div>
+
+</div>
+
+<div id="rightHandMenu">
+    <div id="identityBar" style="">
+        <div style="display:none;" id="userWelcome">Welcome, <span id="userEmailAddress" style="color:#ffffff; word-wrap:break-word;"></span></div>
+        <a class="btn btn-link" href="#SignOut" id="userSignOut" style="display:none">Sign Out</a>
+        <a class="btn btn-link" href="#SignIn" id="userSignIn" style="display:none">Sign In</a>
+        
+    </div>
+    <div id="rightUnselectedDiv"
+         onclick="if (!lens.visualizer.isEditing()) {
+                        
+                             lens.enterEditMode();
+                          }
+                     else {
+                            lens.leaveEditAndRefresh();
+                          }">
+        Edit Mode
+    </div>
+    <div id="btnAdd">+ Add</div>
+</div>
+<div id="popupDiv">
+    <div id="popupName" style="font-weight:600;"></div>
+    <br />
+    <div id="popupDescription"></div>
+    <div id="popupButtons"></div>
+    <div id="popupEditButtons" style="display:none">
+        <button id="btnDelete">Delete</button>
+        <button id="btnProperties">Properties</button>
+    </div>
+    <div id="popupExpand"><i class="fa fa-expand" style="top:3px;left:4px;position:absolute;"></i></div>
+</div>
+<div id="expandedPopupDiv">
+    <div id="popupAddingObject" class="popupContent" style="display:none">
+        <h1>Add</h1>
+        <h2>Choose one of the following items below to add to your diagram.</h2>
+        <br />
+        <ul class="listViewResources" id="listViewResources">
+            <li class="listItemResource"><a href="#" id="listViewResourcesARROW_TYPE.ArrowTip">Arrow</a></li>
+            <li class="listItemResource"><a href="#" id="listViewResourcesCYLINDER_TYPE.BlobStorage"><img src="~/assets/logos/Storage Blob.png">Blob Storage</a></li>
+            <li class="listItemResource"><a href="#" id="listViewResourcesBOX2D_TYPE.BorderOnly">Box 2D (border only)</a></li>
+            <li class="listItemResource"><a href="#" id="listViewResourcesBOX2D_TYPE.Filled">Box 2D (filled)</a></li>
+            <li class="listItemResource"><a href="#" id="listViewResourcesCYLINDER_TYPE.DocumentDB"><img src="~/assets/logos/DocumentDB.png">Document DB</a></li>
+            <li class="listItemResource"><a href="#" id="listViewResourcesBOX_TYPE.EventHubs"><img src="~/assets/logos/Event Hubs.png">Event Hubs</a></li>
+            <li class="listItemResource"><a href="#" id="listViewResourcesBOX_TYPE.GitRepo"><img src="~/assets/logos/Git repository.png">Git Repop</a></li>
+            <li class="listItemResource"><a href="#" id="listViewResourcesBOX_TYPE.GitHub"><img src="~/assets/logos/GitHub.png">GitHub</a></li>
+            <li class="listItemResource"><a href="#" id="listViewResourcesBOX_TYPE.HDInsight"><img src="~/assets/logos/HDInsight.png">HDInsight</a></li>
+            <li class="listItemResource"><a href="#" id="listViewResourcesIMAGE_TYPE.Flat">Image (flat)</a></li>
+            <li class="listItemResource"><a href="#" id="listViewResourcesIMAGE_TYPE">Image (floating)</a></li>
+            <li class="listItemResource"><a href="#" id="listViewResourcesBOX_TYPE.MachineLearning"><img src="~/assets/logos/Machine Learning.png">Machine Learning</a></li>
+            <li class="listItemResource"><a href="#" id="listViewResourcesCYLINDER_TYPE.MySQL"><img src="~/assets/logos/MySQL database.png">MySQL</a></li>
+            <li class="listItemResource"><a href="#" id="listViewResourcesBOX_TYPE.O365"><img src="~/assets/logos/Office 365.png">Office 365</a></li>
+            <li class="listItemResource"><a href="#" id="listViewResourcesCYLINDER_TYPE.AzureCache"><img src="~/assets/logos/Azure Cache including Redis.png">Redis Cache</a></li>
+            <li class="listItemResource"><a href="#" id="listViewResourcesLOWBOX_TYPE.Server"><img src="~/assets/logos/CustomServer.png">Server</a></li>
+            <li class="listItemResource"><a href="#" id="listViewResourcesCYLINDER_TYPE.AzureSQL"><img src="~/assets/logos/Azure SQL Database.png">SQL Database</a></li>
+            <li class="listItemResource"><a href="#" id="listViewResourcesCYLINDER_TYPE.SQLDatabase"><img src="~/assets/logos/SQL Database (generic).png">SQL Database (generic)</a></li>
+            <li class="listItemResource"><a href="#" id="listViewResourcesCYLINDER_TYPE.SQLDataSync"><img src="~/assets/logos/SQL Data Sync.png">SQL Data Syc</a></li>
+            <li class="listItemResource"><a href="#" id="listViewResourcesBOX_TYPE.StreamAnalytics"><img src="~/assets/logos/Stream Analytics.png">Stream Analytics</a></li>
+            <li class="listItemResource"><a href="#" id="listViewResourcesTEXT_TYPE.Flat">Text (flat)</a></li>
+            <li class="listItemResource"><a href="#" id="listViewResourcesTEXT_TYPE.Floating">Text (floating)</a></li>
+            <li class="listItemResource"><a href="#" id="listViewResourcesBOX_TYPE.VSO"><img src="~/assets/logos/Visual Studio Online.png">Visual Studio Online</a></li>
+            <li class="listItemResource"><a href="#" id="listViewResourcesBOX_TYPE.VM"><img src="~/assets/logos/VM symbol only.png">VM</a></li>
+            <li class="listItemResource"><a href="#" id="listViewResourcesBOX_TYPE.WebSite"><img src="~/assets/logos/Azure Websites.png">Web App</a></li>
+            <li class="listItemResource"><a href="#" id="listViewResourcesBOX_TYPE.EventHubs"><img src="~/assets/logos/Event Hubs.png">Event Hubs</a></li>
+        </ul>
+    </div>
+    <div id="fileOpenPanel" style="display:none" class="editItem fileListDialog">
+        Please select the file you would like to open:<br />
+        <div id="listViewFiles"></div>
+
+    </div>
+    <div id="fileDownloadPanel" style="display:none" class="editItem fileListDialog">
+        Please select the diagram you would like to download:<br />
+        <div id="listViewFiles2"></div>
+
+    </div>
+    <div id="editPropertiesPanel" class="popupContent" style="display:none">
+        <h1 style="text-align:center;">Properties</h1>
+        <div class="editItem"><img id="editImageItem" /></div>
+        <div class="editItem">ID: <input type="text" id="editID" /> </div>
+        <div class="editItem">Description: <input type="text" id="editDescription" /></div> 
+        <div class="editItem">Pinned to navigation menu? <input type="checkbox" id="editPin" /></div> 
+        <div class="editItem">Name on menu <input type="text" id="editMenuName" /></div> 
+
+        <div class="editItem " id="textPropertiesPanel" style="display:none">
+            Font size <input type="number" id="editFontSize" /><br />
+            Display text <input type="text" id="editText" /><br />
+            <input class="editItem" type='text' id="textColor" />
+
+        </div>
+        <div id="arrowPropertiesPanel" style="display:none" class="editItem">
+            Arrow tips on both ends? <input type="checkbox" id="arrowTipBothEnds" /><br />
+            <input class="editItem" type='text' id="arrowColor" />
+            
+
+        </div>
+        <div id="boxPropertiesPanel" style="display:none" class="editItem">
+            <input class="editItem" type='text' id="boxColor" />
+
+
+        </div>
+
+        <div id="imagePropertiesPanel" style="display:none" class="editItem">
+            Image URL: <input class="editItem" type='text' id="imageURL" />
+            Image Size: <input class="editItem" type='number' id="imageSize" />
+            Floating image? <input class="editItem" type="checkbox" id="floatingImage" />
+            If floating, how high from the floor? <input type="number" id="imageHeight" />
+
+
+        </div>
+
+       
+        <div class="editItem" id="saveButtons">
+            <button id="propertiesSave">Save</button> <button id="propertiesCancel">Cancel</button>
+        </div>
+    </div>
+    <div id="incompleteMessage">
+        This UI hasn't been built yet. Here's where we would interact with each component.
+    </div>
+    <div id="expandedClose"><i class="fa fa-close" style="top:3px;left:4px;position:absolute;"></i></div>
+</div>
+
+
+<script type="text/javascript">
+    var lens = null;
+
+</script>
+@Scripts.Render("~/Scripts/Libraries/hand.minified.js")
+
+
+@Scripts.Render("~/bundles/jquery")
+@Scripts.Render("~/bundles/bootstrap")
+@Scripts.Render("~/bundles/velocity")
+@Scripts.Render("~/bundles/signalr")
+
+
+<script src="~/Scripts/Libraries/spectrum.js"></script>
+<script src="~/Scripts/Libraries/Babylon.2.2.js"></script>
+
+<script src="~/Scripts/Libraries/adal.js"></script>
+<script src="~/Scripts/AzureLensApp/app.js"></script>
+<script src="~/Scripts/azureLensApp/app3DView.js"></script>
+<script src="~/Scripts/azureLensApp/fileLoader.js"></script>
+
+
+
+<script type="text/javascript">
+
+
+    function prompt(title,value, callback) {
+        bootbox.prompt({
+            title: title,
+            value: value,
+            callback: callback
+
+        });
+        
+    }
+        
+        window.config = {
+            instance: 'https://login.microsoftonline.com/',
+            tenant: 'AzureLens.onmicrosoft.com',
+            clientId: 'b160ccc5-913b-4416-8642-169c63d2dc26',
+            postLogoutRedirectUri: window.location.origin,
+           // cacheLocation: 'localStorage', // enable this for IE, as sessionStorage does not work for localhost.
+            postLogoutRedirectUri: window.location.href,
+        };
+    var authContext;
+    
+
+
+    function createADALInstance() {
+        
+       
+        return authContext;
+    }
+
+    function querystring(param) {
+        var url = window.location.search.substring(1);
+        var a = url.split('&');
+        for (var i = 0; i < a.length; i++) {
+            var item = a[i].split('=');
+            if (item[0] == param) {
+                return item[1];
+            }
+        }
+        return null;
+    }
+
+
+
+    $(document).ready(function () {
+
+        if (window.location.protocol != "https:")
+            window.location.href = "https:" + window.location.href.substring(window.location.protocol.length);
+
+        authContext = new AuthenticationContext(window.config);
+        
+        var isCallback = authContext.isCallback(window.location.hash);
+        authContext.handleWindowCallback();
+
+    
+
+        if (isCallback && !authContext.getLoginError()) {
+            window.location = authContext._getItem(authContext.CONSTANTS.STORAGE.LOGIN_REQUEST);
+        }
+
+         
+ 
+
+        var xmlhttp = new XMLHttpRequest();
+        var githubparam = querystring("github");
+        var githubparamencoded = btoa(githubparam);
+        if (querystring("github") != null) {
+            xmlhttp.open("GET", "api/GitHub/" + btoa(querystring("github")), true);
+        } else if (querystring("share") != null) {
+
+            xmlhttp.open("GET", "services/v1/diagrams/shared/" + querystring("share"), true);
+        }
+        else {
+            xmlhttp.open("GET", "SampleModels/AzureLens.json", true);
+        }
+        xmlhttp.onreadystatechange = function () {
+            if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                lens = new AzureLens();
+                if (querystring("share") != null) {
+                    lens.createScene(JSON.stringify(JSON.parse(xmlhttp.responseText).Result));
+                }
+                else {
+                lens.createScene(xmlhttp.responseText);
+                }
+
+            }
+        }
+        xmlhttp.send();
+
+    });
+</script>
+<div style="display:none">
+    AzureLens.net prototype is an experimental interactive dashboard for Microsoft Azure.
+
+    2015 Microsoft. All rights reserved.
+    Contact: mat.velloso@microsoft.com
+</div>
+

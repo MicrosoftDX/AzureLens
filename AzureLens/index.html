@@ -1,0 +1,36 @@
+﻿<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Babylon - Basic scene</title>
+
+    <style>
+        html, body {
+            overflow: hidden;
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        #renderCanvas {
+            width: 100%;
+            height: 100%;
+            touch-action: none;
+        }
+    </style>
+	<script src="https://code.jquery.com/pep/0.3.0/pep.js"></script>
+	<script src="scripts/poly2tri.js"></script>
+	<script src="scripts/oimo.js"></script>
+    <script src="scripts/babylon.js"></script>
+    <script src="index.js"></script>
+</head>
+<body>
+    <canvas id="renderCanvas"></canvas>
+    <script language="javascript">
+
+        //function defined in index.js
+        createScene();
+
+    </script>
+</body>
+</html>

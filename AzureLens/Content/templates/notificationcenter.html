@@ -1,0 +1,6 @@
+﻿<div class="notification-container">
+    <div class="alert alert-{{ item.getStyle() }}" ng-repeat="(x, item) in items">
+        <button type="button" class="close" ng-click="remove(x)"><span>&times;</span></button>
+        <span class="alert-txt">{{ item.message }}</span>
+    </div>
+</div>

@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" /><script src="/Scripts/Libraries/jquery-1.10.2.min.js"></script>
+    <script src="/Content/cssbundle"></script>
+
+    <script src="/bundles/modernizr"></script>
+    <script src="/Scripts/Libraries/jquery.signalR-2.2.0.min.js"></script>
+    <script src="signalr/hubs"></script>
+
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="container">
+                <input type="text" id="message" />
+                <input type="button" id="sendmessage" value="Send" />
+                <input type="hidden" id="displayname" />
+                <ul id="discussion"></ul>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        $(function () {
+            // Declare a proxy to reference the hub.
+            var clientHub = $.connection.clientHub;
+
+            clientHub.client.updates = function () {
+                //something got updated.
+            };
+
+            var token = null;
+
+            try {
+                var key = sessionStorage.getItem('adal.token.keys');
+                var tokenKey = 'adal.access.token.key' + key.toString().replace('|', '');
+                token = sessionStorage.getItem(tokenKey);
+
+                $.connection.hub.qs = { "Token": token };
+
+            }
+            catch (e) {
+                console.error("no token found")
+                ;
+            }
+
+
+            // Start the connection.
+            $.connection.hub.start({ transport: 'longPolling' }, function () {
+                console.log('connection started!');
+            }).done(function () {
+                $('#sendmessage').click(function () {
+                    // Call the Send method on the hub.
+                    clientHub.server.addResources(['foo', 'bar']);
+                    // Clear text box and reset focus for next comment.
+                    $('#message').val('').focus();
+                });
+            });
+        });
+    </script>
+
+
+
+
+</body>
+</html>

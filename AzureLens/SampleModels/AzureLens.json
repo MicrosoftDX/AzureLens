@@ -1,0 +1,259 @@
+﻿{
+  "objects": [
+    {
+      "id": "AzureLens.Net",
+      "type": "BOX_TYPE.WebSite",
+      "position2": {
+        "x": 0,
+        "y": 0
+      },
+      "pinnedToMenu": true,
+      "menuName": "2 - AzureLens.Net Web App",
+      "description": "AzureLens is a prototype for an interactive dashboard focused on designing, understanding and managing the architecture of your application on Microsoft Azure."
+    },
+       {
+      "id": "SampleVM",
+      "type": "BOX_TYPE.VM",
+      "position2": { "x": -20, "y": 0 },
+      "pinnedToMenu": true,
+      "menuName": "Sample VM",
+      "description": "This is a sample VM that updates its color based on the real status of a live Azure resource using ARM."    
+    },
+    {
+      "id": "box2dWebServer",
+      "type": "BOX2D_TYPE.BorderOnly",
+      "points2": [
+        { "x": -15, "y": -23 },
+        { "x": 15, "y": 5 }
+      ],
+      "color4": [ 1, 1, 1, 1 ]
+    },
+    {
+      "id": "textWebServer",
+      "type": "TEXT_TYPE.Flat",
+      "position2": { "x": -2, "y": -24 },
+      "color4": [ 1, 1, 1, 1 ],
+      "fontSize": 60,
+      "fontName": "Segoe UI",
+      "text": "AzureLens.Net"
+    },
+    {
+      "id": "Users",
+      "type": "IMAGE_TYPE.Floating",
+      "position2": { "x": 0, "y": -45 },
+      "image": "assets/logos/Generic people 1.png",
+      "size": 15,
+      "height": 1,
+      "pinnedToMenu": true,
+      "menuName": "1 - Users",
+      "description": "AzureLens targets users wanting to see and manage the entire architecture of their solutions on Microsoft Azure."
+    },
+     {
+      "id": "Diagrams",
+      "type": "IMAGE_TYPE.Floating",
+      "position2": { "x": -10, "y": -13 },
+      "image": "assets/logos/Generic Files.png",
+      "size": 5,
+      "height": 2,
+      "pinnedToMenu": true,
+      "menuName": "3 - How Diagrams Work",
+      "description": "A user can create as many diagrams as needed to represent a sytem. Diagrams are represented in very simple JSON files that can even be edited in Notepad (but we will have a nice drag and drop experience on AzureLens itself for that)."    
+    },
+    {
+      "id": "textdiagrams",
+      "type": "TEXT_TYPE.Floating",
+      "position2": { "x": -13, "y": -13 },
+      "color4": [ 1, 1, 1, 1 ],
+      "fontSize": 60,
+      "fontName": "Segoe UI",
+      "text": "Diagrams (JSON)",
+      "height": -1
+    },
+    {
+      "id": "ASP.NETWebAPI",
+      "type": "BOX2D_TYPE.Filled",
+      "points2": [
+        { "x": -5, "y": -7 },
+        { "x": 5, "y": -11 }
+      ],
+      "color4": [ 0.5, 0, 0, 1 ],
+      "pinnedToMenu": true,
+      "menuName": "4 - Web API",
+      "description": "ASP.NET Web API/MVC are used so the UI can communicate with our server tier and provide the logic behind AzureLens."    
+    },
+    {
+      "id": "textASP.NET",
+      "type": "TEXT_TYPE.Flat",
+      "position2": { "x": -4.5, "y": -8.5 },
+      "color4": [ 1, 1, 1, 1 ],
+      "fontSize": 60,
+      "fontName": "Segoe UI",
+      "text": "ASP.NET Web API/MVC"
+    },
+    {
+      "id": "box2dserver",
+      "type": "BOX2D_TYPE.BorderOnly",
+      "points2": [
+        { "x": -6, "y": -6 },
+        { "x": 6, "y": -13 }
+      ],
+      "color4": [ 1, 1, 1, 1 ]
+    },
+    {
+      "id": "textServer",
+      "type": "TEXT_TYPE.Flat",
+      "position2": { "x": -1, "y": -11.5 },
+      "color4": [ 1, 1, 1, 1 ],
+      "fontSize": 60,
+      "fontName": "Segoe UI",
+      "text": "Server"
+    },
+    {
+      "id": "box2dUI",
+      "type": "BOX2D_TYPE.BorderOnly",
+      "points2": [
+        { "x": -8, "y": -14 },
+        { "x": 8, "y": -22 }
+      ],
+      "color4": [ 1, 1, 1, 1 ]
+    },
+    {
+      "id": "textUI",
+      "type": "TEXT_TYPE.Flat",
+      "position2": { "x": -0.5, "y": -14.5 },
+      "color4": [ 1, 1, 1, 1 ],
+      "fontSize": 60,
+      "fontName": "Segoe UI",
+      "text": "UI"
+    },
+    {
+      "id": "UserInterface",
+      "type": "BOX2D_TYPE.Filled",
+      "points2": [
+        { "x": -5, "y": -16 },
+        { "x": 5, "y": -18 }
+      ],
+      "color4": [ 0, 0.5, 0, 1 ],
+      "pinnedToMenu": true,
+      "menuName": "5 - User Interface",
+      "description": "The UI is build in HTML/TypeScript and provides two options: a lightweight 2D view in AngularJS and richer, 3D experience using Babylon.js. We aim to provide a nice touch/mouse/keyboard navigation experience across the whole application."    
+    },
+    {
+      "id": "textHTML5",
+      "type": "TEXT_TYPE.Flat",
+      "position2": { "x": -3.5, "y": -16.5 },
+      "color4": [ 1, 1, 1, 1 ],
+      "fontSize": 60,
+      "fontName": "Segoe UI",
+      "text": "HTML5/TypeScript"
+    },
+    {
+      "id": "text2D",
+      "type": "TEXT_TYPE.Flat",
+      "position2": { "x": -6.5, "y": -19.5 },
+      "color4": [ 1, 1, 1, 1 ],
+      "fontSize": 60,
+      "fontName": "Segoe UI",
+      "text": "2D: Angular.js"
+    },
+    {
+      "id": "AngularJS",
+      "type": "BOX2D_TYPE.Filled",
+      "points2": [
+        { "x": -7, "y": -19 },
+        { "x": -1, "y": -21 }
+      ],
+      "color4": [ 0, 0.5, 0, 1 ],
+      "pinnedToMenu": true,
+      "menuName": "6 - Angular",
+      "description": "Angular JS provides a very quick, easy to use single page application model for a 2D navigation experience that should work on most screens and device types."    
+    },
+    {
+      "id": "text3D",
+      "type": "TEXT_TYPE.Flat",
+      "position2": { "x": 1.5, "y": -19.5 },
+      "color4": [ 1, 1, 1, 1 ],
+      "fontSize": 60,
+      "fontName": "Segoe UI",
+      "text": "3D: Babylon.js"
+    },
+    {
+      "id": "BabylonJS",
+      "type": "BOX2D_TYPE.Filled",
+      "points2": [
+        { "x": 1, "y": -19 },
+        { "x": 7, "y": -21 }
+      ],
+      "color4": [ 0, 0.5, 0, 1 ],
+      "pinnedToMenu": true,
+      "menuName": "7 - Babylon.js",
+      "description": "Babylon JS provides a rich, interactive 3D navigation experience so we can quickly visualize Azure components, their current state and how they interact with each other."    
+    },
+
+    {
+      "id": "AzureDocumentDB",
+      "type": "CYLINDER_TYPE.DocumentDB",
+      "position2": { "x": 1, "y": 20 },
+      "pinnedToMenu": true,
+      "menuName": "8 - Document DB",
+      "description": "The diagrams and additional configuration are stored in a Document DB store"    
+    },
+    {
+      "id": "box2dDB",
+      "type": "BOX2D_TYPE.BorderOnly",
+      "points2": [
+        { "x": -3, "y": 16 },
+        { "x": 5, "y": 24 }
+      ],
+      "color4": [ 1, 1, 1, 1 ]
+    },
+    {
+      "id": "textDB",
+      "type": "TEXT_TYPE.Flat",
+      "position2": { "x": -1.5, "y": 15 },
+      "color4": [ 1, 1, 1, 1 ],
+      "fontSize": 60,
+      "fontName": "Segoe UI",
+      "text": "Document DB"
+    },
+    {
+      "id": "ArrowSQL",
+      "type": "ARROW_TYPE.ArrowTip",
+      "points2": [
+        { "x": 1, "y": 6 },
+        { "x": 1, "y": 13 }
+      ],
+      "color4": [ 0.5, 0.5, 1, 1 ]
+    },
+    {
+      "id": "ARM",
+      "type": "BOX2D_TYPE.Filled",
+      "points2": [
+        { "x": 18, "y": -1 },
+        { "x": 35, "y": -6 }
+      ],
+      "color4": [ 0, 0, 1, 1 ],
+      "pinnedToMenu": true,
+      "menuName": "9 - Azure Resource Manager",
+      "description": "ARM API is used by the .Net code in order to communicate with Azure resources."
+    },
+    {
+      "id": "textARM",
+      "type": "TEXT_TYPE.Flat",
+      "position2": { "x": 19, "y": -3 },
+      "color4": [ 1, 1, 1, 1 ],
+      "fontSize": 80,
+      "fontName": "Segoe UI",
+      "text": "Azure Resource Manager API"
+    },
+    {
+      "id": "ArrowARM",
+      "type": "ARROW_TYPE.ArrowTip",
+      "points2": [
+        { "x": 7, "y": -9 },
+        { "x": 17, "y": -4 }
+      ],
+      "color4": [ 0.5, 0.5, 1, 1 ]
+    }
+  ]
+}
