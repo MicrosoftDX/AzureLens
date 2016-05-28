@@ -1,5 +1,5 @@
 ﻿// Copyright (c) Microsoft. See License.txt in the project root for license information.
-/// <reference path="typings/babylon.2.2.d.ts" />
+/// <reference path="typings/babylon.d.ts" />
 /// <reference path="typings/jquery/jquery.d.ts" />
 interface IAppView {
     displayPopup: (item, editing: boolean, visualizer: IAppView) => void;

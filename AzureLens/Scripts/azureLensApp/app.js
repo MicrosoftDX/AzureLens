@@ -6,17 +6,17 @@ var BoxData = (function () {
     function BoxData() {
     }
     return BoxData;
-})();
+}());
 var CylinderData = (function () {
     function CylinderData() {
     }
     return CylinderData;
-})();
+}());
 var ObjectData = (function () {
     function ObjectData() {
     }
     return ObjectData;
-})();
+}());
 var ARROW_TYPE;
 (function (ARROW_TYPE) {
     ARROW_TYPE[ARROW_TYPE["Simple"] = 0] = "Simple";
@@ -622,7 +622,7 @@ var AzureLens = (function () {
         this.menu.multilevelpushmenu('redraw');
     };
     return AzureLens;
-})();
+}());
 //*********************************************************   
 //   
 //AzureLens.Net, https://github.com/MicrosoftDX/AzureLens 
@@ -649,3 +649,4 @@ var AzureLens = (function () {
 // WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.  
 //   
 //*********************************************************   
+//# sourceMappingURL=app.js.map

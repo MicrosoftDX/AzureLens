@@ -1,5 +1,5 @@
 // Copyright (c) Microsoft. All rights reserved. Licensed under the MIT license. See full license at the bottom of this file.
-///<reference path="typings/babylon.2.2.d.ts" />
+///<reference path="typings/babylon.d.ts" />
 ///<reference path="typings/jquery/jquery.d.ts" />
 ///<reference path="IAppView.ts" />
 var app3DView = (function () {
@@ -176,55 +176,38 @@ var app3DView = (function () {
         switch (itemType.split(".")[1]) {
             case cylinderDict[CYLINDER_TYPE.AzureCache]:
                 return "assets/logos/Azure Cache including Redis.png";
-                break;
             case cylinderDict[CYLINDER_TYPE.AzureSQL]:
                 return "assets/logos/Azure SQL Database.png";
-                break;
             case cylinderDict[CYLINDER_TYPE.DocumentDB]:
                 return "assets/logos/DocumentDB.png";
-                break;
             case cylinderDict[CYLINDER_TYPE.MySQL]:
                 return "assets/logos/MySQL database.png";
-                break;
             case cylinderDict[CYLINDER_TYPE.SQLDatabase]:
                 return "assets/logos/SQL Database (generic).png";
-                break;
             case cylinderDict[CYLINDER_TYPE.SQLDataSync]:
                 return "assets/logos/SQL Data Sync.png";
-                break;
             case cylinderDict[CYLINDER_TYPE.BlobStorage]:
                 return "assets/logos/Storage Blob.png";
-                break;
             case boxDict[BOX_TYPE.VM]:
                 return "assets/logos/VM symbol only.png";
-                break;
             case boxDict[BOX_TYPE.WebSite]:
                 return "assets/logos/Azure Websites.png";
-                break;
             case boxDict[BOX_TYPE.O365]:
                 return "assets/logos/Office 365.png";
-                break;
             case boxDict[BOX_TYPE.GitRepo]:
                 return "assets/logos/Git repository.png";
-                break;
             case boxDict[BOX_TYPE.GitHub]:
                 return "assets/logos/GitHub.png";
-                break;
             case boxDict[BOX_TYPE.VSO]:
                 return "assets/logos/Visual Studio Online.png";
-                break;
             case boxDict[BOX_TYPE.MachineLearning]:
                 return "assets/logos/Machine Learning.png";
-                break;
             case boxDict[BOX_TYPE.HDInsight]:
                 return "assets/logos/HDInsight.png";
-                break;
             case boxDict[BOX_TYPE.StreamAnalytics]:
                 return "assets/logos/Stream Analytics.png";
-                break;
             case boxDict[BOX_TYPE.EventHubs]:
                 return "assets/logos/Event Hubs.png";
-                break;
             default: return null;
         }
     };
@@ -451,7 +434,7 @@ var app3DView = (function () {
             if (_this.timeout != null)
                 window.clearTimeout(_this.timeout);
             _this.timeout = null;
-            _this._arcCamera.angularSensibility = 2000;
+            // this._arcCamera.angularSensibility=2000;
             _this._arcCamera.panningSensibility = 250;
             _this._arcCamera.lowerAlphaLimit = null;
             _this._arcCamera.upperAlphaLimit = null;
@@ -1425,7 +1408,7 @@ var app3DView = (function () {
         }, 10000);
     };
     return app3DView;
-})();
+}());
 //*********************************************************   
 //   
 //AzureLens.Net, https://github.com/MicrosoftDX/AzureLens 
@@ -1452,3 +1435,4 @@ var app3DView = (function () {
 // WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.  
 //   
 //*********************************************************   
+//# sourceMappingURL=app3DView.js.map

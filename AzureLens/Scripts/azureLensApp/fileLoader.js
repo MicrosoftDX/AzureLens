@@ -23,7 +23,7 @@ var FileLoader = (function () {
         this._element.click();
     };
     return FileLoader;
-})();
+}());
 var JsonDoc = (function () {
     function JsonDoc() {
     }
@@ -33,4 +33,5 @@ var JsonDoc = (function () {
         return this._object;
     };
     return JsonDoc;
-})();
+}());
+//# sourceMappingURL=fileLoader.js.map
