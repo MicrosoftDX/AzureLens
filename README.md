@@ -45,3 +45,5 @@ This is an ASP.Net project meant to run on Visual Studio 2015. It's mostly C# an
 2-Azure Active Directory: In order to design diagrams, the user has to be authenticated against Azure AD. To thest the app locally you will need to setup your own Azure AD application and configure the settings (Client ID, Tenant, Audience and Password) in the web.config for it
 
 3-Azure blob storage: Setup an Azure blob storage and point the web.config (StorageConnectionString) to it.
+
+This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/). For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
