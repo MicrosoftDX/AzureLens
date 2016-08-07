@@ -56,17 +56,6 @@
       "text": "How-Old.net"
     },
     {
-      "id": "EventHub",
-      "type": "BOX_TYPE.EventHubs",
-      "position2": {
-        "x": 1,
-        "y": 20
-      },
-      "pinnedToMenu": true,
-      "menuName": "3 - Event Hubs",
-      "description": "This metadata (without the photo) is sent to event hubs. Event hubs can handle a very large volume of data and will feed Stream Analytics with it."
-    },
-    {
       "id": "box2dEventHub",
       "type": "BOX2D_TYPE.BorderOnly",
       "points2": [
