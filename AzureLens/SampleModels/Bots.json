@@ -30,7 +30,7 @@
       "description": "Skype is Microsoft's first and best channel, used by millions of people worldwide. Bots created in Bot Framework are automatically enabled on Skype"
     },
     {
-      "id": "imgFacebook",
+      "id": "Facebook",
       "type": "IMAGE_TYPE.Floating",
       "position2": {
         "x": -4,
@@ -41,7 +41,7 @@
       "height": 1
     },
     {
-      "id": "imgSlack",
+      "id": "Slack",
       "type": "IMAGE_TYPE.Floating",
       "position2": {
         "x": 2,
@@ -52,7 +52,7 @@
       "height": 1
     },
     {
-      "id": "imgTelegram",
+      "id": "Telegram",
       "type": "IMAGE_TYPE.Floating",
       "position2": {
         "x": 8,
@@ -63,7 +63,7 @@
       "height": 1
     },
     {
-      "id": "imgGroupMe",
+      "id": "GroupMe",
       "type": "IMAGE_TYPE.Floating",
       "position2": {
         "x": 14,
@@ -74,7 +74,7 @@
       "height": 1
     },
     {
-      "id": "imgTwilio",
+      "id": "Twilio",
       "type": "IMAGE_TYPE.Floating",
       "position2": {
         "x": 20,
@@ -215,7 +215,7 @@
     },
 
     {
-      "id": "imgAzure",
+      "id": "Azure",
       "type": "IMAGE_TYPE.Flat",
       "position2": {
         "x": 30,
