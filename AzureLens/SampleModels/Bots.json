@@ -56,45 +56,6 @@
       "text": "How-Old.net"
     },
     {
-      "id": "box2dEventHub",
-      "type": "BOX2D_TYPE.BorderOnly",
-      "points2": [
-        {
-          "x": -3,
-          "y": 16
-        },
-        {
-          "x": 5,
-          "y": 24
-        }
-      ],
-      "color4": [ 1, 1, 1, 1 ]
-    },
-    {
-      "id": "textEventHub",
-      "type": "TEXT_TYPE.Flat",
-      "position2": {
-        "x": -1,
-        "y": 15
-      },
-      "color4": [ 1, 1, 1, 1 ],
-      "fontSize": 60,
-      "fontName": "Segoe UI",
-      "text": "Event Hubs"
-    },
-    {
-      "id": "StreamAnalytics",
-      "type": "BOX_TYPE.StreamAnalytics",
-      "position2": {
-        "x": 1,
-        "y": 40
-      },
-      "pinnedToMenu": true,
-      "menuName": "4 - Stream Analytics",
-      "description": "Stream analytics will process and aggregate data using a simple, well know SQL syntax and then feed Power BI where a nice, customizable dashboard will be available. Optionally, for more advanced scenarios, we can also feed into HDInsights which is Hadoop on Azure for more advanced data processing capabilities"
-
-    },
-    {
       "id": "box2dStreamAnalytics",
       "type": "BOX2D_TYPE.BorderOnly",
       "points2": [
