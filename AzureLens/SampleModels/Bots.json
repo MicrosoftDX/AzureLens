@@ -1,6 +1,7 @@
 ﻿{
   "objects": [
 
+
     {
       "id": "WebSite",
       "type": "BOX_TYPE.WebSite",
@@ -19,7 +20,7 @@
         "x": -15,
         "y": -15
       },
-      "image": "https://azurelensimages.blob.core.windows.net/img/facebook-messenger-logo.png",
+      "image": "assets/logos/Cloud, Office 365.png",
       "size": 15
     },
 
